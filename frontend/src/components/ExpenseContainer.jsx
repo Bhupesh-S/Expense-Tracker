@@ -9,7 +9,7 @@ function ExpenseContainer() {
 
   const fetchExpenses = async () => {
     try {
-      const response = await fetch('http://localhost:3000/expense');
+      const response = await fetch('https://expense-tracker-bn4l.onrender.com/expense');
       const data = await response.json();
       setExpense(data);
     } catch (error) {
@@ -23,7 +23,7 @@ function ExpenseContainer() {
 
   const addExpense = async (title, amount) => {
     try {
-      const response = await fetch('http://localhost:3000/expense', {
+      const response = await fetch('https://expense-tracker-bn4l.onrender.com/expense', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -42,7 +42,7 @@ function ExpenseContainer() {
 
   const deleteExpenses = async (id) => {
     try {
-      const response = await fetch(`http://localhost:3000/expense/${id}`, {
+      const response = await fetch(`https://expense-tracker-bn4l.onrender.com/expense/${id}`, {
         method: 'DELETE',
       });
 
@@ -56,7 +56,7 @@ function ExpenseContainer() {
 
   const editExpense = async (id, title, amount) => {
     try {
-      const response = await fetch(`http://localhost:3000/expense/${id}`, {
+      const response = await fetch(`https://expense-tracker-bn4l.onrender.com/expense/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
